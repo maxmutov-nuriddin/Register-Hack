@@ -2,10 +2,9 @@ let list = document.querySelector('.data')
 
 async function Regis() {
   try {
+    list.innerHTML = "";
     let { data } = await request.get("register");
-    console.log(data);
-    list.innerHTML = ""
-    data.map((items, i) => {
+    data.map((items) => {
       list.innerHTML += mappingData(items)
     })
   } catch (err) {

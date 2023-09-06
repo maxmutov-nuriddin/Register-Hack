@@ -9,6 +9,7 @@ form.addEventListener('submit', function (e) {
   Regis()
   postData()
   register();
+  page();
 });
 
 function validateForm() {
@@ -46,5 +47,17 @@ async function postData() {
   };
   await request.post("register", teacherData);
 
-  console.log(teacherData);
+}
+
+async function page() {
+  try {
+    let { data } = await request.get("register");
+    data.map((items) => {
+      if (items.email.includes("mahmudovnuriddin35")) {
+        window.location.href = '../data.html';
+      }
+    })
+  } catch (err) {
+    console.log(err);
+  }
 }
