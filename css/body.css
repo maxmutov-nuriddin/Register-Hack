@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://img3.akspic.ru/attachments/crops/7/0/3/4/44307/44307-priroda-pihta-dymka-les-ekosistema-1920x1080.jpg);
+  background-repeat: no-repeat;
+  font-family: Cuprum;
+  background-size: 100% 100%;
+}
+
+input,
+span,
+table,
+th,
+td,
+form,
+div,
+.form-select {
+  background-color: transparent !important;
+  color: #fff !important;
+}
