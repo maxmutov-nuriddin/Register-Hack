@@ -1,5 +1,7 @@
 let list = document.querySelector('.data')
 
+let deletbtn = document.querySelector('.deletbtn')
+
 async function Regis() {
   try {
     list.innerHTML = "";
@@ -31,10 +33,7 @@ window.addEventListener("click", async (e) => {
 
   let checkDelete = e.target.classList.contains("delete");
   if (checkDelete) {
-    let deleteConfirm = confirm("Do you want to delete this akkaut?");
-    if (deleteConfirm) {
-      await request.delete(`register/${id}`);
-      Regis();
-    }
+    await request.delete(`register/${id}`);
+    Regis();
   }
 });
