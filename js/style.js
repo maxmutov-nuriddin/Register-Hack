@@ -32,7 +32,7 @@ window.addEventListener("click", async (e) => {
 
   let checkDelete = e.target.classList.contains("delete");
   if (checkDelete) {
-    let deleteConfirm = confirm("Do you want to delete this teacher?");
+    let deleteConfirm = confirm("Do you want to delete this akkaut?");
     if (deleteConfirm) {
       await request.delete(`register/${id}`);
       Regis();
